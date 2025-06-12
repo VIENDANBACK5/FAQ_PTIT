@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #fafafa;
+  --text-primary: #000000d9;
+  --text-secondary: #00000073;
+  --border-color: #d9d9d9;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #141414;
+  --bg-secondary: #1f1f1f;
+  --text-primary: #ffffffd9;
+  --text-secondary: #ffffff73;
+  --border-color: #434343;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Tùy chỉnh cuộn */
+::-webkit-scrollbar {
+    width: 6px; /* Scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Hover effect */
+}
+
+
+/* Auth: start  */
+.login-card .ant-card-head-title{
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.register-card .ant-card-head-title{
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+}
+/* Auth: end  */
+
+/* Question: start */
+.vote-count, .answer-count, .view-count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 5px;
+  }
+  
+.vote-count span, .answer-count span, .view-count span {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.vote-count small, .answer-count small, .view-count small {
+    font-size: 12px;
+    color: #8c8c8c;
+  }
+  
+.vote-count.positive {
+    color: #52c41a;
+}
+  
+.vote-count.negative {
+    color: #f5222d;
+}
+
+.ant-popover-content .ant-popover-inner{
+    padding: 0px;
+}
+/* Question: end */
+
+/* Question detail: start */
+.question-content img, .answer-content img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .question-content pre, .answer-content pre {
+    background-color: #f6f8fa;
+    border-radius: 3px;
+    padding: 16px;
+    overflow: auto;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 85%;
+  }
+  
+  .question-content code, .answer-content code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    background-color: rgba(27,31,35,0.05);
+    border-radius: 3px;
+  }
+  
+  .question-content pre code, .answer-content pre code {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    word-break: normal;
+    white-space: pre;
+    overflow: visible;
+  }
+/* Question detail: end */
+
+/* Header search: start */
+.search-hint-popover .ant-popover-inner {
+  padding: 0;
+}
+
+.search-hint-popover .ant-popover-arrow {
+  display: none;
+}
+/* Header search: end */
+
+/* Theme CSS: start */
+.theme-bg {
+  background-color: var(--bg-primary);
+}
+
+.theme-text {
+  color: var(--text-primary);
+}
+
+.theme-border {
+  border-color: var(--border-color);
+}
+/* Theme CSS: end */
