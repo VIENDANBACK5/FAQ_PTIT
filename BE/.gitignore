@@ -1,0 +1,9 @@
+# your_project_name/.gitignore
+
+# Môi trường & Bí mật
+.env
+venv/
+__pycache__/
+*.pyc
+
+# Các tệp khác bạn không muốn commit...
